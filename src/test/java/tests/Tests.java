@@ -11,7 +11,9 @@ import utils.MyScreenRecorder;
 import utils.TestBase;
 
 public class Tests extends TestBase {
-    @Test(priority=1)
+
+    @JiraPolicy(logTicketReady=true)
+    @Test(priority=1, enabled=true)
     public void testLogin() {
         SoftAssert softAssert=new SoftAssert();
         softAssert.assertTrue(LoginPage.isLoginPageDisplay(),"Login page not displayed");
